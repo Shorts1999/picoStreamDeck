@@ -1,8 +1,10 @@
 #include <Arduino.h>
 
-#include "USBKeyboard.h"
+#include <USBKeyboard.h>
 
 const uint8_t pushbuttons[4] = { p2, p3, p4, p5 };
+
+USBKeyboard kb;
 
 void setup() {
   // put your setup code here, to run once:
@@ -17,7 +19,7 @@ void loop() {
     if(!digitalRead(pushbuttons[i])){
       switch(i){
         case 0:
-          
+          kb.key_code("y", KEY_ALT);
           break;
         case 1: 
           
