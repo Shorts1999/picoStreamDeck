@@ -15,22 +15,22 @@ void setup() {
 }
 
 void loop() {
-  for(uint8_t i =0; i<sizeof(pushbuttons); i++){
-    if(!digitalRead(pushbuttons[i])){
-      switch(i){
+  for (uint8_t i = 0; i < sizeof(pushbuttons); i++) {
+    if (!digitalRead(pushbuttons[i])) {
+      switch (i) {
         case 0:
-          kb.key_code("y", KEY_ALT);
+          kb.key_code('y', KEY_ALT);
           break;
-        case 1: 
-          
+        case 1:
+
           break;
-        case 2: 
-          
+        case 2:
+
           break;
         case 3:
-          
+          break;
       }
-    delay(500);
+      delay(500);
     }
   }
 }
